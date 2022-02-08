@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+
+
+header {
+    background-color: red;
+    height: 70px;
+}
+
+body {
+    background-color: yellow;
+}
+
+h2 {
+    background-color: #008000;
+    min-width: 70px;
+    color: blanchedalmond;
+}
+
+
+aside {
+    background-color: green;
+    color: whitesmoke;
+    width: 100%;
+    max-width: 350px;
+    height: calc(100vh - 70px); /*the 70 comes from the height of the header*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    border-right: 4px solid hsla(0, 0%, 100%, .3);
+
+  }
+
+
+  .sidebar__stats, .sidebar__actions{
+    padding: 10px;
+    background-color: rebeccapurple;
+    width: 90%;
+    text-align: center;
+    color: whitesmoke;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 4px solid hsla(0, 0%, 100%, .3);
+  }
