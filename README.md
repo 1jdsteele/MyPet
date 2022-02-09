@@ -27,3 +27,9 @@ I want my pet to go crazy when it's sleepiness goes to 10 because that is what h
 
 
 
+Instantiate your Tomagotchi
+Age display
+add the ability to name your pet.
+Increase your pet's age every x minutes
+Morph your pet at certain ages.
+Animate your pet across the screen while it's alive.

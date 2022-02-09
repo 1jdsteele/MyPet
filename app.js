@@ -5,6 +5,7 @@ console.log("MyPet works!!!");
 let hunger = 0;
 let sleepy = 0;
 let bored = 0;
+let age = 0;
 
 
 // ======== text changers ======
@@ -30,37 +31,55 @@ function startGame() {
     setInterval(hungerFuncUp, /*Math.floor(Math.random())*/1000);
     setInterval(sleepFuncUp, /*Math.floor(Math.random())*/1000);
     setInterval(boredFuncUp, /*Math.floor(Math.random())*/1000);
+    setInterval(ageFuncUp, /*Math.floor(Math.random())*/5000)
+    setInterval(death, /*Math.floor(Math.random())*/1000);
+    
+
+    if (hunger === 10 || sleepy === 10 || bored === 10){
+        console.log("GAME OVER")
+        return;
+    }
 }
 startGame();
 
 
-//========functions stats go up  ========
+//========functions stats go up and death  ========
 
 function hungerFuncUp() {
     hunger++;
-    if (hunger === 10){
+    /*if (hunger === 10){
         $("#hunger").text("You killed him!");
-    } else $("#hunger").text("Hunger: " + hunger);
+    } else */$("#hunger").text("Hunger: " + hunger);
     
 };
 
 function sleepFuncUp() {
     sleepy++;
-    if (sleepy === 10){
+    /*if (sleepy === 10){
         $("#sleepiness").text("You killed him!");
-    } else $("#sleepiness").text("Sleepiness: " + sleepy);
+    } else*/ $("#sleepiness").text("Sleepiness: " + sleepy);
     
 }
 
 function boredFuncUp() {
     bored++;
-    if (bored === 10){
+  /*  if (bored === 10){
         $("#boredom").text("You killed him!");
-    } else $("#boredom").text("Boredom: " + bored);
+    } else*/ $("#boredom").text("Boredom: " + bored);
 }
 /*
 setInterval(hungerFuncUp, 1000);
 */
+
+function ageFuncUp() {
+    age++;
+    $("#age").text("Age: " + age);
+};
+
+
+
+
+
 //========== actions make stats go down ============
 
 $("#feed").on("click", () => {
@@ -86,21 +105,19 @@ $("#fun").on("click", () => {
 });
 
 //========= death scenarios ==============
-function thisBetterRun() {
-if (hunger === 10 /*|| sleepy === 10 || bored === 10*/){
-    $("#fun").text("You killed him!");
-    console.log("It ran!")
-    /*
+function death() {
+if (hunger === 10 || sleepy === 10 || bored === 10){
+    $("#fun").text("You killed him!");    
     $("#quiet").text("You killed him!");
     $("#feed").text("You killed him!");
     $("#hunger").text("You killed him!");
-    $("#buredom").text("You killed him!");
+    $("#boredom").text("You killed him!");
     $("#sleepiness").text("You killed him!");
-    */
+    
 };
 };
 
-thisBetterRun();
+
 
 
 
