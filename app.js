@@ -8,9 +8,11 @@ let bored = 0;
 
 
 // ======== text changers ======
+/*
 $("#hunger").text("Hunger: " + hunger);
 $("#sleepiness").text("Sleepiness: " + sleepy);
 $("#boredom").text("Boredom: " + bored);
+*/
 
 
 //===== FUNCTIONS =======
@@ -32,21 +34,29 @@ function startGame() {
 startGame();
 
 
-//========functions stats go up ========
+//========functions stats go up  ========
 
 function hungerFuncUp() {
     hunger++;
-    $("#hunger").text("Hunger: " + hunger);
+    if (hunger === 10){
+        $("#hunger").text("You killed him!");
+    } else $("#hunger").text("Hunger: " + hunger);
+    
 };
 
 function sleepFuncUp() {
     sleepy++;
-    $("#sleepiness").text("Sleepiness: " + sleepy);
+    if (sleepy === 10){
+        $("#sleepiness").text("You killed him!");
+    } else $("#sleepiness").text("Sleepiness: " + sleepy);
+    
 }
 
 function boredFuncUp() {
     bored++;
-    $("#boredom").text("Boredom: " + bored);
+    if (bored === 10){
+        $("#boredom").text("You killed him!");
+    } else $("#boredom").text("Boredom: " + bored);
 }
 /*
 setInterval(hungerFuncUp, 1000);
@@ -74,5 +84,28 @@ $("#fun").on("click", () => {
     $("#boredom").text("Boredom: " + bored); 
 
 });
+
+//========= death scenarios ==============
+function thisBetterRun() {
+if (hunger === 10 /*|| sleepy === 10 || bored === 10*/){
+    $("#fun").text("You killed him!");
+    console.log("It ran!")
+    /*
+    $("#quiet").text("You killed him!");
+    $("#feed").text("You killed him!");
+    $("#hunger").text("You killed him!");
+    $("#buredom").text("You killed him!");
+    $("#sleepiness").text("You killed him!");
+    */
+};
+};
+
+thisBetterRun();
+
+
+
+
+
+
 
 //clearInterval
