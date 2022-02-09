@@ -117,6 +117,35 @@ if (hunger === 10 || sleepy === 10 || bored === 10){
 };
 };
 
+//=========user input ===========
+//this section from Dalton Justis-Hart
+
+document.querySelector("#commentButton").addEventListener("click", function(event){
+    
+    //this will prevent a default submission of a form
+    
+    event.preventDefault();
+
+    //this will stop the parent event trigger
+    
+    event.stopPropagation();
+
+    //get user input 
+    
+    const userInput = document.querySelector("#commentInput").value;
+
+
+    //create an element
+    
+    const newComment = $('#nameDisplay');
+    newComment.text("Your pet's name is " + userInput);
+
+ 
+
+
+    //this one empties the input field
+    document.querySelector("#commentInput").value = "";
+});
 
 
 

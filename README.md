@@ -26,10 +26,12 @@ I want my pet to escape instead of die when hunger or boredom reaches 10. This i
 I want my pet to go crazy when it's sleepiness goes to 10 because that is what happens in real life.
 
 
+add the ability to name your pet.
+Animate your pet across the screen while it's alive.
 
 Instantiate your Tomagotchi
-Age display
-add the ability to name your pet.
-Increase your pet's age every x minutes
+
+
+
 Morph your pet at certain ages.
-Animate your pet across the screen while it's alive.
+move wireframe to read me via issue
