@@ -29,9 +29,9 @@ I want my pet to go crazy when it's sleepiness goes to 10 because that is what h
 
 
 
-Instantiate your Tomagotchi
 
 
 
-Morph your pet at certain ages.
+
+
 move wireframe to read me via issue
