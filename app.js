@@ -4,7 +4,7 @@ console.log("MyPet works!!!");
 
 let hunger = 0;
 let sleepy = 0;
-let bored = "bored variable";
+let bored = 0;
 
 
 // ======== text changers ======
@@ -27,6 +27,7 @@ hungerFuncUp();
 function startGame() {
     setInterval(hungerFuncUp, /*Math.floor(Math.random())*/1000);
     setInterval(sleepFuncUp, /*Math.floor(Math.random())*/1000);
+    setInterval(boredFuncUp, /*Math.floor(Math.random())*/1000);
 }
 startGame();
 
@@ -43,6 +44,10 @@ function sleepFuncUp() {
     $("#sleepiness").text("Sleepiness: " + sleepy);
 }
 
+function boredFuncUp() {
+    bored++;
+    $("#boredom").text("Boredom: " + bored);
+}
 /*
 setInterval(hungerFuncUp, 1000);
 */
@@ -59,8 +64,14 @@ $("#feed").on("click", () => {
 $("#quiet").on("click", () => {
     
     sleepy = 0;
-    $("#sleepiness").text("Sleepiness: " + sleepy);
-    
+    $("#sleepiness").text("Sleepiness: " + sleepy); 
+
+});
+
+$("#fun").on("click", () => {
+
+    bored = bored - 2 ;
+    $("#boredom").text("Boredom: " + bored); 
 
 });
 
