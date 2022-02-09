@@ -4,27 +4,37 @@
     box-sizing: border-box;
   }
 
+:root {
+    --night: #0D3B66;
+    --day: #F4D35E;
+    --fColor: #FAF0CA;
+    --primary: #F95738;
+    --secondary: #EE964B;
 
+}
 
 
 header {
-    background-color: red;
+    text-align: center;
+    background-color: var(--primary);
     height: 70px;
+    border-bottom: 4px solid hsla(0, 0%, 100%, .3);
 }
 
 body {
-    background-color: yellow;
+    background-color: var(--day);
+    
 }
 
 h2 {
-    background-color: #008000;
+    
     min-width: 70px;
-    color: blanchedalmond;
+    color: var(--fColor);
 }
 
 
 aside {
-    background-color: green;
+    background-color: var(--secondary);
     color: whitesmoke;
     width: 100%;
     max-width: 350px;
@@ -47,4 +57,23 @@ aside {
     text-decoration: none;
     text-transform: uppercase;
     border-bottom: 4px solid hsla(0, 0%, 100%, .3);
+    margin: 10px;
+  }
+
+  .sidebar__actions{
+    cursor: pointer;
+    border-radius: 10px;
+  }
+
+
+  .bi-triangle {
+      height: 100px;
+      width: 100px;
+      
+  }
+
+  main {
+      position: absolute;
+      left: 50%;
+      bottom: 50%;
   }
