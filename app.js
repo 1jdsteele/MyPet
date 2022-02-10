@@ -1,11 +1,18 @@
 console.log("MyPet works!!!");
 
 // ====== VARIABLES =======
-
+let myPet = ""
 let hunger = 0;
 let sleepy = 0;
 let bored = 0;
 let age = 0;
+let alive = true;
+let hungerInterval = "";
+let sleepInterval = "";
+let boredInterval = "";
+let ageInterval = "";
+let deathInterval = "";
+let evolutionInterval = "";
 
 
 // ======== text changers ======
@@ -28,21 +35,55 @@ hungerFuncUp();
 // ========= function to start game ==========
 
 function startGame() {
-    setInterval(hungerFuncUp, /*Math.floor(Math.random())*/1000);
-    setInterval(sleepFuncUp, /*Math.floor(Math.random())*/1000);
-    setInterval(boredFuncUp, /*Math.floor(Math.random())*/1000);
-    setInterval(ageFuncUp, /*Math.floor(Math.random())*/5000)
-    setInterval(death, /*Math.floor(Math.random())*/1000);
-    setInterval(evolution, /*Math.floor(Math.random())*/1000);
+    hungerInterval = setInterval(hungerFuncUp, /*Math.floor(Math.random())*/1000);
+    sleepInterval = setInterval(sleepFuncUp, /*Math.floor(Math.random())*/1000);
+    boredInterval =setInterval(boredFuncUp, /*Math.floor(Math.random())*/1000);
+    ageInterval = setInterval(ageFuncUp, /*Math.floor(Math.random())*/5000);
+    deathInterval = setInterval(death, /*Math.floor(Math.random())*/1000);
+    evolutionInterval = setInterval(evolution, /*Math.floor(Math.random())*/1000);
+    setInterval(endGame, 1000);
+    level2();
+    // setInterval(updateMyPet, /*Math.floor(Math.random())*/1000);
+//    if (age > 2) {
+//         setInterval(hungerFuncUp, /*Math.floor(Math.random())*/1000);
+//         setInterval(sleepFuncUp, /*Math.floor(Math.random())*/1000);
+//         setInterval(boredFuncUp, /*Math.floor(Math.random())*/1000);
+//         setInterval(ageFuncUp, /*Math.floor(Math.random())*/5000);
+//         setInterval(death, /*Math.floor(Math.random())*/1000);
+//         setInterval(evolution, /*Math.floor(Math.random())*/1000);
+     
+//    }
 
     
 
+    
+}
+
+startGame();
+
+function endGame() {
     if (hunger === 10 || sleepy === 10 || bored === 10){
         console.log("GAME OVER")
-        return;
+        clearInterval(hungerInterval);
+        clearInterval(sleepInterval);
+        clearInterval(boredInterval);
+        clearInterval(ageInterval);
+        clearInterval(deathInterval);
+        clearInterval(evolutionInterval);
     }
 }
-startGame();
+
+function level2() {
+    //if ((age >2){
+        console.log("level2 funcitoning yo")
+        setInterval(hungerFuncUp, /*Math.floor(Math.random())*/1000);
+        setInterval(sleepFuncUp, /*Math.floor(Math.random())*/1000);
+        setInterval(boredFuncUp, /*Math.floor(Math.random())*/1000);
+        setInterval(ageFuncUp, /*Math.floor(Math.random())*/5000)
+        setInterval(death, /*Math.floor(Math.random())*/1000);
+        setInterval(evolution, /*Math.floor(Math.random())*/1000);
+   // }
+}
 
 
 //========functions stats go up and death  ========
@@ -108,7 +149,8 @@ $("#fun").on("click", () => {
 
 //========= death scenarios ==============
 function death() {
-if (hunger === 10 || sleepy === 10 || bored === 10){
+if (hunger >= 10 || sleepy >= 10 || bored >= 10){
+    alive = false;
     $("#fun").text("You killed him!");    
     $("#quiet").text("You killed him!");
     $("#feed").text("You killed him!");
@@ -160,6 +202,40 @@ document.querySelector("#commentButton").addEventListener("click", function(even
 
 
 // .attr("src", "url")
+
+/*
+// ====== INSTANTIATE MYPET WITH A CLASS ===============
+
+
+
+
+
+    class PetArchetype {
+        constructor(sleepinessFactor, hungerFactor, boredFactor, ageFactor, aliveFactor = true){
+            this.sleepinessFactor = sleepinessFactor;
+            this.hungerFactor = hungerFactor;
+            this.boredFactor = boredFactor;
+            this.ageFactor = ageFactor;
+            this.aliveFactor = aliveFactor;
+        };     
+
+        //render methods
+    };
+
+
+
+    const myPetInstantiated = new PetArchetype(sleepy, hunger, bored, age, alive); /*{
+        constructor(sleepinessFactor, hungerFactor, boredFactor, ageFactor, aliveFactor = true){
+            this.sleepinessFactor = sleepy;
+            this.hungerFactor = hunger;
+            this.boredFactor = bored;
+            this.ageFactor = age;
+            this.aliveFactor = alive;
+    }
+};
+*/
+
+
 
 
 //clearInterval

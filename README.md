@@ -35,3 +35,4 @@ I want my pet to go crazy when it's sleepiness goes to 10 because that is what h
 
 
 move wireframe to read me via issue
+make sure readme has 
