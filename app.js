@@ -42,7 +42,7 @@ function startGame() {
     deathInterval = setInterval(death, /*Math.floor(Math.random())*/1000);
     evolutionInterval = setInterval(evolution, /*Math.floor(Math.random())*/1000);
     setInterval(endGame, 1000);
-    level2();
+    setTimeout(level2, 25000);
     // setInterval(updateMyPet, /*Math.floor(Math.random())*/1000);
 //    if (age > 2) {
 //         setInterval(hungerFuncUp, /*Math.floor(Math.random())*/1000);
