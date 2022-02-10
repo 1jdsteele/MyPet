@@ -106,11 +106,13 @@ aside {
 } */
 
 
-
+img{
+    width: 200px;
+}
 
 /* below code is from w3 schools shake an image article */
 
- img { 
+ .shake { 
      width: 200px;
     /* Start the shake animation and make the animation last for 0.5 seconds */
      animation: shake .5s; 

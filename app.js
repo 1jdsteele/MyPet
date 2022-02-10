@@ -70,6 +70,7 @@ function endGame() {
         clearInterval(ageInterval);
         clearInterval(deathInterval);
         clearInterval(evolutionInterval);
+
         
     }
 }
@@ -168,6 +169,11 @@ if (hunger >= 10 || sleepy >= 10 || bored >= 10){
     $("#hunger").text("You killed him!");
     $("#boredom").text("You killed him!");
     $("#sleepiness").text("You killed him!");
+    $("#age").text("You killed him!"); 
+    $("#nameDisplay").text("You killed him!"); 
+    $(".shake").attr("class", "dontShake");
+    
+   
     
 };
 };
