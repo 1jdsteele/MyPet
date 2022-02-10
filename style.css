@@ -140,6 +140,6 @@ img{
 
   @media (max-width: 500px){
       img{
-          opacity: 0%;
+          display: none;
       }
   }
