@@ -70,6 +70,7 @@ function endGame() {
         clearInterval(ageInterval);
         clearInterval(deathInterval);
         clearInterval(evolutionInterval);
+        
     }
 }
 
@@ -126,9 +127,14 @@ function ageFuncUp() {
 //========== actions make stats go down ============
 
 $("#feed").on("click", () => {
-    
-    hunger--;
+    if (hunger === 0){
+        hunger = 0;
+        $("#hunger").text("Hunger: " + hunger);
+    } else {
+        hunger--;
     $("#hunger").text("Hunger: " + hunger);
+    }
+    
     
 
 });
@@ -141,9 +147,14 @@ $("#quiet").on("click", () => {
 });
 
 $("#fun").on("click", () => {
-
-    bored = bored - 2 ;
+    if (bored < 2){
+        bored = 0;
     $("#boredom").text("Boredom: " + bored); 
+    } else {
+        bored = bored - 2 ;
+    $("#boredom").text("Boredom: " + bored); 
+    }
+    
 
 });
 
