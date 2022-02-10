@@ -33,9 +33,9 @@ h2 {
 }
 
 
-aside {
+aside { /*this styling from Dalton Justis-hart*/
     background-color: var(--secondary);
-    color: whitesmoke;
+    
     width: 100%;
     max-width: 350px;
     height: calc(100vh - 70px); /*the 70 comes from the height of the header*/
@@ -43,20 +43,20 @@ aside {
     flex-direction: column;
     align-items: center;
     padding-top: 10px;
-    border-right: 4px solid hsla(0, 0%, 100%, .3);
+ 
 
   }
 
 
-  .sidebar__stats, .sidebar__actions{
+  .sidebar__stats, .sidebar__actions{ /*this styling from Dalton Justis-hart*/
     padding: 10px;
     background-color: rebeccapurple;
     width: 90%;
     text-align: center;
-    color: whitesmoke;
+    color: var(--fColor);
     text-decoration: none;
     text-transform: uppercase;
-    border-bottom: 4px solid hsla(0, 0%, 100%, .3);
+    
     margin: 10px;
   }
 
@@ -110,7 +110,7 @@ img{
     width: 200px;
 }
 
-/* below code is from w3 schools shake an image article */
+/* below code for shaking transformation is from w3 schools shake an image article */
 
  .shake { 
      width: 200px;
@@ -135,3 +135,11 @@ img{
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   } 
+
+  /* mobile compatibility below */
+
+  @media (max-width: 500px){
+      img{
+          opacity: 0%;
+      }
+  }

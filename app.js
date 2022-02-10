@@ -171,7 +171,10 @@ if (hunger >= 10 || sleepy >= 10 || bored >= 10){
     $("#sleepiness").text("You killed him!");
     $("#age").text("You killed him!"); 
     $("#nameDisplay").text("You killed him!"); 
+    $("#commentButton").text("You killed him!");
     $(".shake").attr("class", "dontShake");
+    //$("#age").off(); 
+    //$("#nameDisplay").off(); 
     
    
     
@@ -255,4 +258,5 @@ document.querySelector("#commentButton").addEventListener("click", function(even
 
 
 
-//clearInterval
+
+
