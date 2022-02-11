@@ -43,6 +43,9 @@ function startGame() {
     evolutionInterval = setInterval(evolution, /*Math.floor(Math.random())*/1000);
     setInterval(endGame, 1000);
     setTimeout(level2, 25000);
+    //let audio = new Audio ('https://drive.google.com/file/d/1ykEJaEwaLUzyEggjNevneungzPvAtcFJ/view?usp=sharing')
+    //let audio = new Audio('https://drive.google.com/file/d/1ZuKqskAj1FarILcXzek-68Ws_cnZRScO/view?usp=sharing');
+    //audio.play();
     // setInterval(updateMyPet, /*Math.floor(Math.random())*/1000);
 //    if (age > 2) {
 //         setInterval(hungerFuncUp, /*Math.floor(Math.random())*/1000);
