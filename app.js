@@ -7,12 +7,14 @@ let sleepy = 0;
 let bored = 0;
 let age = 0;
 let alive = true;
+let time = 0;
 let hungerInterval = "";
 let sleepInterval = "";
 let boredInterval = "";
 let ageInterval = "";
 let deathInterval = "";
 let evolutionInterval = "";
+let timeInterval = "";
 
 
 
@@ -30,6 +32,7 @@ function startGame() {
     ageInterval = setInterval(ageFuncUp, 5000);
     deathInterval = setInterval(death, 1000);
     evolutionInterval = setInterval(evolution, 1000);
+    timeInterval = setInterval(timeFuncUp, 1000);
     setInterval(endGame, 1000);
     setTimeout(level2, 25000);
     //let audio = new Audio ('https://drive.google.com/file/d/1ykEJaEwaLUzyEggjNevneungzPvAtcFJ/view?usp=sharing')
@@ -41,20 +44,21 @@ startGame();
 
 function endGame() {
     if (hunger === 10 || sleepy === 10 || bored === 10){
-        console.log("GAME OVER")
+        
         clearInterval(hungerInterval);
         clearInterval(sleepInterval);
         clearInterval(boredInterval);
         clearInterval(ageInterval);
         clearInterval(deathInterval);
         clearInterval(evolutionInterval);
+        clearInterval(timeInterval);
 
         
     }
 }
 
 function level2() {
-        console.log("level2 funcitoning yo")
+        
         setInterval(hungerFuncUp, 1000);
         setInterval(sleepFuncUp, 1000);
         setInterval(boredFuncUp, 1000);
@@ -64,7 +68,7 @@ function level2() {
 }
 
 
-//========functions stats go up and death  ========
+//========functions stats go up  ========
 
 function hungerFuncUp() {
     hunger++;
@@ -89,7 +93,10 @@ function ageFuncUp() {
     $("#age").text("Age: " + age);
 };
 
-
+function timeFuncUp() {
+    time++;
+    $("#time").text("Pet Survived " + time +"s")
+}
 
 
 
