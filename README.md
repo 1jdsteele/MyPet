@@ -28,11 +28,10 @@ I want my pet to go crazy when it's sleepiness goes to 10 because that is what h
 
 
 
+Below is link to original wireframe.
+https://github.com/1jdsteele/MyPet/issues/1#issue-1131269924
 
 
 
 
-
-
-move wireframe to read me via issue
-make sure readme has 
+I made this project because my gurus assigned it. I think that this is a good project for my skill level to practice the techniques I have been taught and to explore new techniques. I used html, css, and javascript to make this game. To make this game I first made a wireframe while brainstorming what I could want from this game. Then I had some long conversations with friends which created an incredible amount of scope creep, so I had to reign it in and concentrate on the most important MVPs. After I finished the MVPs I tried I wanted added extra functionality to make this a more stereotypical game, such as stopping timers when the user fail. Then I tried to make mobile compatibility. To install the game I pushed my game to git and created a domain name for it. The domain name is https://1jdsteele.github.io/MyPet and is available if you have internet access. I still need to fix some CSS issues, both on mobile and on desktop.

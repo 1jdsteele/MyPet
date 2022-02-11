@@ -18,7 +18,7 @@ header {
     text-align: center;
     background-color: var(--primary);
     height: 70px;
-    border-bottom: 4px solid hsla(0, 0%, 100%, .3);
+    
 }
 
 body {
@@ -30,7 +30,9 @@ h2 {
     
     min-width: 70px;
     color: var(--fColor);
+    
 }
+
 
 
 aside { /*this styling from Dalton Justis-hart*/
@@ -79,7 +81,9 @@ aside { /*this styling from Dalton Justis-hart*/
       bottom: 50%;
   }
 
-
+header h2 {
+    margin-top: 10 px;
+}
 
   /* below is taken fromMohammad of stack overflow */
   /* @-webkit-keyframes shake {
