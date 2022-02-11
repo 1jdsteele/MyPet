@@ -1,6 +1,6 @@
 
 
-// ====== VARIABLES =======
+// ====== VARIABLES ======
 let myPet = ""
 let hunger = 0;
 let sleepy = 0;
