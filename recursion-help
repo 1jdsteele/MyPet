@@ -1,0 +1,62 @@
+function isPalindrome(check) {
+    // This function returns True if the provided string is a palindrome and returns false if it is not.
+    //turn string into array
+    let thisArray = check.split("");
+    console.log(thisArray);
+    //if array.length = 1 || 0 return true
+    if (thisArray.length <= 1) {
+        console.log("true");
+    //else    
+    } else {
+    //pop and shift and compare pop and shift
+         let popped = thisArray.pop();
+         let shifted = thisArray.shift();
+         console.log(thisArray);
+         if (popped === shifted) {
+           //JAKE assign below to a variable
+          //thisArray.join(' ');
+           let nextCheck = thisArray.join(' ');
+          console.log(nextCheck);
+           return isPalindrome(nextCheck);
+           
+        } else {
+            console.log("false");
+        }
+     }
+    
+    
+    //if true turn into string and call isPalindrome
+    //if false return false
+}
+
+//PREMILIMINARILY SEEMS PALINDROMES OF 5 LETTERS OR MORE GIVE UNINTENDED RESPONSE
+//BUT ALSO TEN LETTER NON PALINDROM WITH LAST ITERATION NOT MATCHING
+
+//LIST OF ARGUMENTS THAT PRODUCE INTENDED RESPONSE
+// "ooo"
+// "oooo"
+// "ahoy"
+// "eke"
+// "hoooo"
+
+
+
+//LIST OF ARGUMENTS THAT PRODUCE UNINTENDED RESPONSE
+// "hannah"
+//"radar"
+// "ooooo"
+// "racecar"
+//"oooohooooo"
+        
+
+
+//A SOLUTION BY ZOE PETERSON
+// function isPalindrome(word) {
+//     if (word.length <= 1) {
+//         return true
+//     } else if (word[0] !== word[word.length - 1]) {
+//         return false
+//     } else {
+//         return isPalindrome(word.slice(1, -1))
+//     }
+// }
